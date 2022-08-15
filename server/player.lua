@@ -253,6 +253,12 @@ function QBCore.Player.CreatePlayer(PlayerData, Offline)
         self.Functions.UpdatePlayerData()
     end
 
+    function self.Functions.SetPlayerData(key, val)
+        if not key then return end
+        self.PlayerData[key] = val
+        self.Functions.UpdatePlayerData()
+    end
+
     function self.Functions.SetMetaData(meta, val)
         if not meta then return end
         meta = meta:lower()
@@ -506,6 +512,10 @@ function QBCore.Player.CreatePlayer(PlayerData, Offline)
         return self.PlayerData.items[slot]
     end
 
+    function self.Functions.AddMethod(methodName, handler)
+        self.Functions[methodName] = handler
+    end
+
     function self.Functions.Save()
         if self.Offline then
             QBCore.Player.SaveOffline(self.PlayerData)
@@ -528,6 +538,35 @@ function QBCore.Player.CreatePlayer(PlayerData, Offline)
         -- At this point we are safe to emit new instance to third party resource for load handling
         TriggerEvent('QBCore:Server:PlayerLoaded', self)
         self.Functions.UpdatePlayerData()
+    end
+end
+
+-- Add a new function to the Functions table of the player class
+-- Use-case:
+--[[
+    AddEventHandler('QBCore:Server:PlayerLoaded', function(player)
+        QBCore.Functions.AddPlayerMethod(player.PlayerData.source, "functionName", function(oneArg, orMore)
+            -- do something here
+        end)
+    end)
+]]
+
+function QBCore.Functions.AddPlayerMethod(ids, methodName, handler)
+    local idType = type(ids)
+    if idType == "number" then
+        if ids == -1 then
+            for _, v in pairs(QBCore.Players) do
+                v.Functions.AddMethod(methodName, handler)
+            end
+        else
+            if not QBCore.Players[ids] then return end
+
+            QBCore.Players[ids].Functions.AddMethod(methodName, handler)
+        end
+    elseif idType == "table" and table.type(ids) == "array" then
+        for i = 1, #ids do
+            QBCore.Functions.AddPlayerMethod(ids[i], methodName, handler)
+        end
     end
 end
 
@@ -600,19 +639,19 @@ function QBCore.Player.DeleteCharacter(source, citizenid)
     local result = MySQL.scalar.await('SELECT license FROM players where citizenid = ?', { citizenid })
     if license == result then
         local query = "DELETE FROM %s WHERE citizenid = ?"
-		local tableCount = #playertables
-		local queries = table.create(tableCount, 0)
+        local tableCount = #playertables
+        local queries = table.create(tableCount, 0)
 
-		for i = 1, tableCount do
-			local v = playertables[i]
-			queries[i] = {query = query:format(v.table), values = { citizenid }}
-		end
+        for i = 1, tableCount do
+            local v = playertables[i]
+            queries[i] = {query = query:format(v.table), values = { citizenid }}
+        end
 
         MySQL.transaction(queries, function(result2)
-			if result2 then
-				TriggerEvent('qb-log:server:CreateLog', 'joinleave', 'Character Deleted', 'red', '**' .. GetPlayerName(source) .. '** ' .. license .. ' deleted **' .. citizenid .. '**..')
+            if result2 then
+                TriggerEvent('qb-log:server:CreateLog', 'joinleave', 'Character Deleted', 'red', '**' .. GetPlayerName(source) .. '** ' .. license .. ' deleted **' .. citizenid .. '**..')
             end
-		end)
+        end)
     else
         DropPlayer(source, 'You Have Been Kicked For Exploitation')
         TriggerEvent('qb-log:server:CreateLog', 'anticheat', 'Anti-Cheat', 'white', GetPlayerName(source) .. ' Has Been Dropped For Character Deletion Exploit', true)
