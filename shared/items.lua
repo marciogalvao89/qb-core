@@ -447,6 +447,52 @@ QBShared.Items = {
 	['rededepescanivel4'] 			= {['name'] = 'rededepescanivel4', 		['label'] = 'Fishing net Nivel 4', 			['weight'] = 20, 		['type'] = 'item', 		['image'] = 'rededepescanivel4.png', 		    ['unique'] = false,    ['useable'] = true, 	   ['shouldClose'] = true,	   	['combinable'] = nil,   ['description'] = ''},	
 	['rededepescanivel5'] 			= {['name'] = 'rededepescanivel5', 		['label'] = 'Fishing net Nivel 5', 			['weight'] = 20, 		['type'] = 'item', 		['image'] = 'rededepescanivel5.png', 		    ['unique'] = false,    ['useable'] = true, 	   ['shouldClose'] = true,	   	['combinable'] = nil,   ['description'] = ''},	
 	
+-- m-Farming
+	['sementescafe'] 				= {['name'] = 'sementescafe', 			['label'] = 'Coffee Seeds', 	['weight'] = 1000, ['type'] = 'item', ['image'] = 'sementescafe.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''}, 
+	['cafe'] 						= {['name'] = 'cafe', 					['label'] = 'Coffee', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'cafe.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''}, 
+	['sementesbatatas'] 			= {['name'] = 'sementesbatatas', 		['label'] = 'Potato Seeds', 	['weight'] = 1000, ['type'] = 'item', ['image'] = 'sementesbatatas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['batatas'] 					= {['name'] = 'batatas', 				['label'] = 'Potatoes', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'batatas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['sementestomate'] 				= {['name'] = 'sementestomate', 		['label'] = 'Tomato Seeds', 	['weight'] = 1000, ['type'] = 'item', ['image'] = 'sementestomate.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['tomates'] 					= {['name'] = 'tomates', 		['label'] = 'Tomatoes', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'tomates.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['macas'] 						= {['name'] = 'macas', 					['label'] = 'Apples', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'macas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['macasembaladas'] 				= {['name'] = 'macasembaladas', 		['label'] = 'Packaged Apples', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'macasembaladas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['leite'] 						= {['name'] = 'leite', 					['label'] = 'Milk', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'leite.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['leiteembalado'] 				= {['name'] = 'leiteembalado', 			['label'] = 'Packaged Milk', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'leiteembalado.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['laranjas'] 					= {['name'] = 'laranjas', 				['label'] = 'Oranges', 			['weight'] = 1000, ['type'] = 'item', ['image'] = 'laranjas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['laranjasembaladas'] 			= {['name'] = 'laranjasembaladas', 		['label'] = 'Packaged Oranges', 	['weight'] = 1000, ['type'] = 'item', ['image'] = 'laranjasembaladas.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['morangos'] 					= {['name'] = 'morangos', 				['label'] = 'Strawberries', 			['weight'] = 1000, ['type'] = 'item', ['image'] = 'morangos.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['morangosembalados'] 			= {['name'] = 'morangosembalados', 		['label'] = 'Packaged Strawberries', 	['weight'] = 1000, ['type'] = 'item', ['image'] = 'morangosembalados.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['pedacodecouro'] 				= {['name'] = 'pedacodecouro', 			['label'] = 'Piece of Leather', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'pedacodecouro.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['couro'] 						= {['name'] = 'couro', 					['label'] = 'Leather', 				['weight'] = 1000, ['type'] = 'item', ['image'] = 'couro.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
 
+	-- Juices
+	['sumodemaca'] 					= {['name'] = 'sumodemaca', 			['label'] = 'Apple Juice', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'sumodemaca.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['sumodemorango'] 				= {['name'] = 'sumodemorango', 			['label'] = 'Strawberry Juice', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'sumodemorango.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['sumodelaranja'] 				= {['name'] = 'sumodelaranja', 			['label'] = 'Orange Juice', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'sumodelaranja.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+
+	
+	-- box's
+	['smallbox'] 					= {['name'] = 'smallbox', 	['label'] = 'Small Box', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'smallbox.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['medbox'] 						= {['name'] = 'medbox', 	['label'] = 'Medium Box', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'medbox.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['bigbox'] 						= {['name'] = 'bigbox', 	['label'] = 'Big Box', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'bigbox.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+
+	-- Hoes
+	['enchadanivel1'] 				= {['name'] = 'enchadanivel1', 			['label'] = 'Hoe Level 1', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'enchadanivel1.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['enchadanivel2'] 				= {['name'] = 'enchadanivel2', 			['label'] = 'Hoe Level 2', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'enchadanivel2.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['enchadanivel3'] 				= {['name'] = 'enchadanivel3', 			['label'] = 'Hoe Level 3', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'enchadanivel3.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['enchadanivel4'] 				= {['name'] = 'enchadanivel4', 			['label'] = 'Hoe Level 4', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'enchadanivel4.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+	['enchadanivel5'] 				= {['name'] = 'enchadanivel5', 			['label'] = 'Hoe Level 5', 		['weight'] = 1000, ['type'] = 'item', ['image'] = 'enchadanivel5.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = ''},
+
+
+	--ROUBAR SINAIS
+	["stopsign"] = {["name"] = "stopsign", ["label"] = "Stop Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "stopsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Stop Sign"},
+	["walkingmansign"] = {["name"] = "walkingmansign", ["label"] = "Pedestrian Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "walkingmansign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Pedestrian Sign"},
+	["dontblockintersectionsign"] = {["name"] = "dontblockintersectionsign", ["label"] = "Intersection Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "dontblockintersectionsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Intersection Sign"},
+	["uturnsign"] = {["name"] = "uturnsign", ["label"] = "U Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "uturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "U Turn Sign"},
+	["noparkingsign"] = {["name"] = "noparkingsign", ["label"] = "No Parking Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "noparkingsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "No Parking Sign"},
+	["leftturnsign"] = {["name"] = "leftturnsign", ["label"] = "Left Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "leftturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Left Turn Sign"},
+	["rightturnsign"] = {["name"] = "rightturnsign", ["label"] = "Right Turn Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "rightturnsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Right Turn Sign"},
+	["notrespassingsign"] = {["name"] = "notrespassingsign", ["label"] = "No Trespassing Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "notrespassingsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "No Trespassing Sign"},
+	["yieldsign"] = {["name"] = "yieldsign", ["label"] = "Yield Sign", ["weight"] = 1, ["type"] = "item", ["image"] = "yieldsign.png", ["unique"] = false, ["useable"] = true, ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Yield Sign"},
 
 }

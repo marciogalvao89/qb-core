@@ -184,7 +184,7 @@ RegisterNetEvent('QBCore:Server:AddItem', function(itemName, amount, slot, info)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
-    Player.Functions.AddItem(itemName, amount, slot, info)
+    --Player.Functions.AddItem(itemName, amount, slot, info)
 end)
 
 -- Non-Chat Command Calling (ex: qb-adminmenu)
