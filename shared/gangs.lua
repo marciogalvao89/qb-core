@@ -115,7 +115,7 @@ QBShared.Gangs = {
 				isboss = true
             },
         },
-	}
+	},
     ['camorra'] = {
         label = 'Camorra',
         grades = {
@@ -133,7 +133,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['peakyblinders'] = {
         label = 'Peaky Blinders',
         grades = {
@@ -151,7 +151,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['aztecas'] = {
         label = 'Los Aztecas',
         grades = {
@@ -169,7 +169,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['bloods'] = {
         label = 'Bloods',
         grades = {
@@ -187,7 +187,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['piratas'] = {
         label = 'Piratas',
         grades = {
@@ -205,7 +205,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['crips'] = {
         label = 'Crips',
         grades = {
@@ -223,7 +223,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['outlaws'] = {
         label = 'North Outlaws',
         grades = {
@@ -241,7 +241,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['fazendeiros'] = {
         label = 'Fazendeiros',
         grades = {
@@ -259,7 +259,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['grove'] = {
         label = 'Grove Street Families',
         grades = {
@@ -277,7 +277,7 @@ QBShared.Gangs = {
                 isboss = true
             },
         },
-    }
+    },
     ['mafia'] = {
         label = 'Máfia Italiana',
         grades = {
