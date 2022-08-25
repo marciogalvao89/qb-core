@@ -13,59 +13,83 @@ QBShared.Jobs = {
         },
 	},
 	['police'] = {
-		label = 'Law Enforcement',
+		label = 'Polícia de Segurança Pública',
         type = "leo",
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Recruta',
                 payment = 50
             },
 			['1'] = {
-                name = 'Officer',
+                name = 'Agente',
                 payment = 75
             },
 			['2'] = {
-                name = 'Sergeant',
+                name = 'Agente Principal',
                 payment = 100
             },
 			['3'] = {
-                name = 'Lieutenant',
+                name = 'Agente Coordenador',
                 payment = 125
             },
 			['4'] = {
-                name = 'Chief',
-				isboss = true,
+                name = 'Chefe',
                 payment = 150
+            },
+            ['5'] = {
+                name = 'Chefe Principal',
+                payment = 175
+            },
+            ['6'] = {
+                name = 'Chefe Coordenador',
+                payment = 200
+            },
+            ['7'] = {
+                name = 'Diretor Nacional',
+                isboss = true,
+                payment = 225
             },
         },
 	},
 	['ambulance'] = {
-		label = 'EMS',
+		label = 'INEM',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Estagiário',
                 payment = 50
             },
 			['1'] = {
-                name = 'Paramedic',
+                name = 'Enfermeiro',
                 payment = 75
             },
 			['2'] = {
-                name = 'Doctor',
+                name = 'Enfermeiro Chefe',
                 payment = 100
             },
 			['3'] = {
-                name = 'Surgeon',
+                name = 'Médico',
                 payment = 125
             },
 			['4'] = {
-                name = 'Chief',
-				isboss = true,
+                name = 'Médico Chefe',
                 payment = 150
+            },
+            ['5'] = {
+                name = 'Sub-Diretor',
+                payment = 175
+            },
+            ['6'] = {
+                name = 'Diretor Adjunto',
+                payment = 200
+            },
+            ['7'] = {
+                name = 'Diretor Geral de Saude',
+                isboss = true,
+                payment = 225
             },
         },
 	},
@@ -75,7 +99,7 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Recruta',
                 payment = 50
             },
 			['1'] = {
@@ -103,11 +127,11 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Recruta',
                 payment = 50
             },
 			['1'] = {
-                name = 'Driver',
+                name = 'Condutor',
                 payment = 75
             },
 			['2'] = {
@@ -126,12 +150,12 @@ QBShared.Jobs = {
         },
 	},
      ['bus'] = {
-		label = 'Bus',
+		label = 'Autocarro',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Driver',
+                name = 'Condutor',
                 payment = 50
             },
 		},
@@ -142,7 +166,7 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Recruta',
                 payment = 50
             },
 			['1'] = {
@@ -165,24 +189,24 @@ QBShared.Jobs = {
         },
 	},
 	['mechanic'] = {
-		label = 'Mechanic',
+		label = 'Mecânico',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Recruta',
                 payment = 50
             },
 			['1'] = {
-                name = 'Novice',
+                name = 'Novato',
                 payment = 75
             },
 			['2'] = {
-                name = 'Experienced',
+                name = 'Experiente',
                 payment = 100
             },
 			['3'] = {
-                name = 'Advanced',
+                name = 'Avançado',
                 payment = 125
             },
 			['4'] = {
@@ -193,23 +217,23 @@ QBShared.Jobs = {
         },
 	},
 	['judge'] = {
-		label = 'Honorary',
+		label = 'Honorário',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Judge',
+                name = 'Juiz',
                 payment = 100
             },
         },
 	},
 	['lawyer'] = {
-		label = 'Law Firm',
+		label = 'Firma de Advogados',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Associate',
+                name = 'Associado',
                 payment = 50
             },
         },
@@ -220,40 +244,40 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Journalist',
+                name = 'Jornalista',
                 payment = 50
             },
         },
 	},
 	['trucker'] = {
-		label = 'Trucker',
+		label = 'Camionista',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Driver',
+                name = 'Condutor',
                 payment = 50
             },
         },
 	},
 	['tow'] = {
-		label = 'Towing',
+		label = 'Reboque',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Driver',
+                name = 'Condutor',
                 payment = 50
             },
         },
 	},
 	['garbage'] = {
-		label = 'Garbage',
+		label = 'Lixeiro',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Collector',
+                name = 'Coletor',
                 payment = 50
             },
         },
@@ -264,7 +288,7 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Picker',
+                name = 'Apanhador',
                 payment = 50
             },
         },
@@ -275,7 +299,7 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Sales',
+                name = 'Vendedor',
                 payment = 50
             },
         },
