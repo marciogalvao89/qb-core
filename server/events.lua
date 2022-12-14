@@ -175,6 +175,7 @@ RegisterNetEvent('QBCore:Server:SetMetaData', function(meta, data)
     end
     Player.Functions.SetMetaData(meta, data)
     TriggerClientEvent('hud:client:UpdateNeeds', src, Player.PlayerData.metadata['hunger'], Player.PlayerData.metadata['thirst'])
+
 end)
 
 RegisterNetEvent('QBCore:ToggleDuty', function()
