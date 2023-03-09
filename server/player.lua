@@ -642,7 +642,7 @@ function QBCore.Functions.CreatePhoneNumber()
     local UniqueFound = false
     local PhoneNumber = nil
     while not UniqueFound do
-        PhoneNumber = math.random(100,999) .. math.random(1000000,9999999)
+        PhoneNumber = 91 .. math.random(1000000,9999999)
         local query = '%' .. PhoneNumber .. '%'
         local result = MySQL.prepare.await('SELECT COUNT(*) as count FROM players WHERE charinfo LIKE ?', { query })
         if result == 0 then
@@ -670,7 +670,7 @@ function QBCore.Player.CreateWalletId()
     local UniqueFound = false
     local WalletId = nil
     while not UniqueFound do
-        WalletId = 'QB-' .. math.random(11111111, 99999999)
+        WalletId = '2L-' .. math.random(11111111, 99999999)
         local query = '%' .. WalletId .. '%'
         local result = MySQL.prepare.await('SELECT COUNT(*) as count FROM players WHERE metadata LIKE ?', { query })
         if result == 0 then
