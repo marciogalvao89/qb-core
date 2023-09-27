@@ -3,6 +3,12 @@ QBShared = QBShared or {}
 local StringCharset = {}
 local NumberCharset = {}
 
+QBShared.StarterItems = {
+    ['phone'] = { amount = 1, item = 'phone' },
+    ['id_card'] = { amount = 1, item = 'id_card' },
+    ['driver_license'] = { amount = 1, item = 'driver_license' },
+}
+
 for i = 48, 57 do NumberCharset[#NumberCharset + 1] = string.char(i) end
 for i = 65, 90 do StringCharset[#StringCharset + 1] = string.char(i) end
 for i = 97, 122 do StringCharset[#StringCharset + 1] = string.char(i) end
@@ -75,12 +81,6 @@ function QBShared.SetDefaultVehicleExtras(vehicle, config)
     end
 end
 
-QBShared.StarterItems = {
-    ['classic_phone'] = { amount = 1, item = 'classic_phone' },
-    ['id_card'] = { amount = 1, item = 'id_card' },
-    ['sandwich'] = { amount = 5, item = 'sandwich' },
-    ['kurkakola'] = { amount = 5, item = 'kurkakola' },
-}
 
 QBShared.MaleNoGloves = {
     [0] = true,

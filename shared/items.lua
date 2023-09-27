@@ -236,7 +236,8 @@ QBShared.Items = {
 	['weapontint_orange'] 	 		 = {['name'] = 'weapontint_orange', 			['label'] = 'Pintura de arma Laranja', 				['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'weapontint_orange.png', 	['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Pintura de Arma Laranja'},
 	['weapontint_plat'] 	 		 = {['name'] = 'weapontint_plat', 				['label'] = 'Pintura de arma Prateada', 			['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'weapontint_plat.png', 		['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Pintura de Arma de Platina'},
 
-	-- ITEMS
+
+    -- ITEMS
 
 	-- Ammo ITEMS
 	['pistol_ammo'] 				 = {['name'] = 'pistol_ammo', 			  	  	['label'] = 'Munição Pistola', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'pistol_ammo.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Munição para Pistola'},
@@ -757,5 +758,6 @@ QBShared.Items = {
 	--animais
 	['petfood'] 			   	 = {['name'] = 'petfood', 			   	['label'] = 'Comida para animais', 		['weight'] = 100, 		['type'] = 'item', 		['image'] = 'petfood.png', 	   	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Comida para animais'},
 	['petdrink'] 			     	 = {['name'] = 'petdrink', 			  	   	['label'] = 'Bebida para animais', 		    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'petdrink.png', 	    	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Bebida para animais'},
+
 
 }

@@ -168,19 +168,6 @@ RegisterNetEvent('QBCore:UpdatePlayer', function()
     Player.Functions.Save()
 end)
 
-RegisterNetEvent('QBCore:Server:SetMetaData', function(meta, data)
-    local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
-    if not Player then return end
-    if meta == 'hunger' or meta == 'thirst' then
-        if data > 100 then
-            data = 100
-        end
-    end
-    Player.Functions.SetMetaData(meta, data)
-    TriggerClientEvent('hud:client:UpdateNeeds', src, Player.PlayerData.metadata['hunger'], Player.PlayerData.metadata['thirst'])
-
-end)
 
 RegisterNetEvent('QBCore:ToggleDuty', function()
     local src = source
@@ -193,31 +180,31 @@ RegisterNetEvent('QBCore:ToggleDuty', function()
         Player.Functions.SetJobDuty(true)
         TriggerClientEvent('QBCore:Notify', src, Lang:t('info.on_duty'))
     end
+        
+    TriggerEvent('QBCore:Server:SetDuty', src, Player.PlayerData.job.onduty)
     TriggerClientEvent('QBCore:Client:SetDuty', src, Player.PlayerData.job.onduty)
 end)
 
 -- BaseEvents
 
 -- Vehicles
-RegisterServerEvent('baseevents:enteringVehicle', function(veh,seat,modelName,netid)
+RegisterServerEvent('baseevents:enteringVehicle', function(veh,seat,modelName)
     local src = source
     local data = {
         vehicle = veh,
         seat = seat,
         name = modelName,
-        netid = netid,
         event = 'Entering'
     }
     TriggerClientEvent('QBCore:Client:VehicleInfo', src, data)
 end)
 
-RegisterServerEvent('baseevents:enteredVehicle', function(veh,seat,modelName,netid)
+RegisterServerEvent('baseevents:enteredVehicle', function(veh,seat,modelName)
     local src = source
     local data = {
         vehicle = veh,
         seat = seat,
         name = modelName,
-        netid = netid,
         event = 'Entered'
     }
     TriggerClientEvent('QBCore:Client:VehicleInfo', src, data)
@@ -228,13 +215,12 @@ RegisterServerEvent('baseevents:enteringAborted', function()
     TriggerClientEvent('QBCore:Client:AbortVehicleEntering', src)
 end)
 
-RegisterServerEvent('baseevents:leftVehicle', function(veh,seat,modelName,netid)
+RegisterServerEvent('baseevents:leftVehicle', function(veh,seat,modelName)
     local src = source
     local data = {
         vehicle = veh,
         seat = seat,
         name = modelName,
-        netid = netid,
         event = 'Left'
     }
     TriggerClientEvent('QBCore:Client:VehicleInfo', src, data)
@@ -284,18 +270,7 @@ end)
 -- use the netid on the client with the NetworkGetEntityFromNetworkId native
 -- convert it to a vehicle via the NetToVeh native
 QBCore.Functions.CreateCallback('QBCore:Server:SpawnVehicle', function(source, cb, model, coords, warp)
-    local ped = GetPlayerPed(source)
-    model = type(model) == 'string' and joaat(model) or model
-    if not coords then coords = GetEntityCoords(ped) end
-    local veh = CreateVehicle(model, coords.x, coords.y, coords.z, coords.w, true, true)
-    while not DoesEntityExist(veh) do Wait(0) end
-    if warp then
-        while GetVehiclePedIsIn(ped) ~= veh do
-            Wait(0)
-            TaskWarpPedIntoVehicle(ped, veh, -1)
-        end
-    end
-    while NetworkGetEntityOwner(veh) ~= source do Wait(0) end
+    local veh = QBCore.Functions.SpawnVehicle(source, model, coords, warp)
     cb(NetworkGetNetworkIdFromEntity(veh))
 end)
 
@@ -304,12 +279,7 @@ end)
 -- use the netid on the client with the NetworkGetEntityFromNetworkId native
 -- convert it to a vehicle via the NetToVeh native
 QBCore.Functions.CreateCallback('QBCore:Server:CreateVehicle', function(source, cb, model, coords, warp)
-    model = type(model) == 'string' and GetHashKey(model) or model
-    if not coords then coords = GetEntityCoords(GetPlayerPed(source)) end
-    local CreateAutomobile = GetHashKey("CREATE_AUTOMOBILE")
-    local veh = Citizen.InvokeNative(CreateAutomobile, model, coords, coords.w, true, true)
-    while not DoesEntityExist(veh) do Wait(0) end
-    if warp then TaskWarpPedIntoVehicle(GetPlayerPed(source), veh, -1) end
+    local veh = QBCore.Functions.CreateAutomobile(source, model, coords, warp)
     cb(NetworkGetNetworkIdFromEntity(veh))
 end)
 
