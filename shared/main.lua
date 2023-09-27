@@ -76,7 +76,7 @@ function QBShared.SetDefaultVehicleExtras(vehicle, config)
 end
 
 QBShared.StarterItems = {
-    ['phone'] = { amount = 1, item = 'phone' },
+    ['classic_phone'] = { amount = 1, item = 'classic_phone' },
     ['id_card'] = { amount = 1, item = 'id_card' },
     ['sandwich'] = { amount = 5, item = 'sandwich' },
     ['kurkakola'] = { amount = 5, item = 'kurkakola' },

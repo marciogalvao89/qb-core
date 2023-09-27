@@ -250,7 +250,7 @@ QBShared.Jobs = {
         },
 	},
 	['mechanic'] = {
-		label = 'Mecânico',
+		label = 'Mecânico - LS Customs',
         type = "mechanic",
 		defaultDuty = true,
 		offDutyPay = false,
@@ -275,7 +275,7 @@ QBShared.Jobs = {
         },
 	},
 	['mechanic2'] = {
-		label = 'Mecânico',
+		label = 'Mecânico - East Customs',
         type = "mechanic",
 		defaultDuty = true,
 		offDutyPay = false,
@@ -300,7 +300,7 @@ QBShared.Jobs = {
         },
 	},
     ['mechanic3'] = {
-        label = 'Mecânico',
+        label = 'Mecânico - Bennys',
         type = "mechanic",
         defaultDuty = true,
         offDutyPay = false,
@@ -321,6 +321,63 @@ QBShared.Jobs = {
                 name = 'Patrão',
                 isboss = true,
                 payment = 100
+            },
+        },
+    },
+    ['mesanuxta'] = {
+        label = 'Bahama Mamas',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Estagiário',
+                payment = 25
+            },
+            ['1'] = {
+                name = 'Empregado',
+                payment = 35
+            },
+            ['2'] = {
+                name = 'Manager',
+                payment = 60
+            },
+            ['3'] = {
+                name = 'Dono',
+                isboss = true,
+                payment = 75
+            },
+        },
+    },
+    ['vunicorn'] = {
+        label = 'Vanilla Unicorn',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Estagiário',
+                payment = 25
+            },
+            ['1'] = {
+                name = 'Empregado',
+                payment = 35
+            },
+            ['2'] = {
+                name = 'Staff Bar',
+                payment = 40
+            },
+            ['3'] = {
+                name = 'Dançarina',
+                payment = 50
+            },
+            ['4'] = {
+                name = 'Manager',
+                isboss = true,
+                payment = 60
+            },
+            ['5'] = {
+                name = 'Dono',
+                isboss = true,
+                payment = 75
             },
         },
     },
