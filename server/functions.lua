@@ -391,8 +391,8 @@ end
 ---@param source any
 ---@param item string
 function QBCore.Functions.UseItem(source, item)
-    if GetResourceState('codem-inventory') == 'missing' then return end
-    exports['codem-inventory']:UseItem(source, item)
+    if GetResourceState('qb-inventory') == 'missing' then return end
+    exports['qb-inventory']:UseItem(source, item)
 end
 
 ---Kick Player
@@ -564,8 +564,8 @@ end
 ---@param amount number
 ---@return boolean
 function QBCore.Functions.HasItem(source, items, amount)
-    if GetResourceState('codem-inventory') == 'missing' then return end
-    return exports['codem-inventory']:HasItem(source, items, amount)
+    if GetResourceState('qb-inventory') == 'missing' then return end
+    return exports['qb-inventory']:HasItem(source, items, amount)
 end
 
 ---Notify
